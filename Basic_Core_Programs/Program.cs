@@ -11,25 +11,21 @@ namespace Basic_Core_Programs
         static void Main(string[] args)
         {
             Console.WriteLine("\nWelcome to Basic Core Programs");
-            Console.WriteLine("\nPrime_Factors");
-            int a, b;
-            Console.WriteLine("Please enter your number: ");
-            a = Convert.ToInt32(Console.ReadLine());
-            for ( b = 2; a > 1 ; b++)
-                if (a % b == 0)
-                {
-                    int x = 0;
-                    while(a % b == 0)
-                    {
-                        a /= b;
-                        x++;
-                    }
-                    Console.WriteLine($"{b} is a prime factor {x} times ");
-                    Console.ReadLine();
-                }
-               
-           
-      
+            Console.WriteLine("\nCompute_Qtotient_and_Reminder");
+
+            Console.WriteLine("enter a dividend number : ");
+            int dividend =Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter a divisor number : ");
+            int divisor = Convert.ToInt32(Console.ReadLine());
+
+            int quotient = dividend / divisor;
+            int remainder = dividend % divisor;
+
+            Console.WriteLine("Dividend:{0} Divisor{1}",dividend,divisor);
+            Console.WriteLine("Quotient = " + quotient);
+            Console.WriteLine("Remainder = " + remainder);
+            Console.ReadLine();
         }
+
     }
 }
