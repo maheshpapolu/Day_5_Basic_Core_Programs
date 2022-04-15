@@ -11,36 +11,17 @@ namespace Basic_Core_Programs
         static void Main(string[] args)
         {
             Console.WriteLine("\nWelcome to Basic Core Programs");
-            Console.WriteLine("\nFlip a Coin ");
-            // initiating the varibles 
-            int heads = 0;
-            int tails = 0;
-            int numberOfFlips = 0;
-            Console.WriteLine("\n Enter no of times you want to flip a coin");
-            numberOfFlips = Convert.ToInt32(Console.ReadLine());
-            // call the random method
-            Random random = new Random();
-            for (int i = 0; i < numberOfFlips; i++)
-            {
-                double result = random.NextDouble();
-                Console.WriteLine($"\n Coin fliped for {i} times ");
-                if(result > 0.5)
-                {
-                    Console.WriteLine("\ncoin flipping result : Heads");
-                    heads++;
-                
-                }
-                else
-                {
-                    Console.WriteLine("\ncoin flipping result : Tails");
-                    tails++;
-                }
-                double headsPercentage =(heads/Convert.ToDouble(numberOfFlips))*100;
-                double tailspercentage =(tails /Convert.ToDouble(numberOfFlips))*100;
-                Console.WriteLine("\n percentage of heads: " + headsPercentage);
-                Console.WriteLine("\n percentage of tails: " + tailspercentage);
-                Console.ReadLine();
-            }
+            Console.WriteLine("\nFind Leap Year ");
+            Console.WriteLine("Input an Year : ");
+            int CheckYear;
+            CheckYear = Convert.ToInt32(Console.ReadLine());
+            // checking conditions for leap year
+            if ((CheckYear % 400) == 0)
+                Console.WriteLine("{0} is a leap year.\n", CheckYear);
+            else if ((CheckYear % 100) == 0)
+                Console.WriteLine("{0} is not a leap year.\n", CheckYear);
+            else
+                Console.WriteLine("{0} is not a leap year.\n", CheckYear);
         }
     }
 }
