@@ -11,19 +11,20 @@ namespace Basic_Core_Programs
         static void Main(string[] args)
         {
             Console.WriteLine("\nWelcome to Basic Core Programs");
-            Console.WriteLine("\nSwap Two Numbers");
-            int number1, number2, temp;
-            Console.WriteLine("\n Enter first number ; ");
-            number1 = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("\n Enter Second number: ");
-            number2 = Convert.ToInt32(Console.ReadLine());
-            temp = number1;
-            number1 = number2;
-            number2 = temp;
-            Console.WriteLine("\n After Swaping : ");
-            Console.WriteLine("\nFirst Number: ");
-            Console.WriteLine("\nSecond Number: ");
-            Console.ReadLine();
+            Console.WriteLine("\nFind The Number is Even or Odd");
+            Console.WriteLine("\nEnter a Number: ");
+            int number = Convert.ToInt32(Console.ReadLine());
+            if (number % 2 == 0) 
+            {
+                Console.WriteLine("\nEntered Number is an Even Number");
+                Console.ReadLine();
+            }
+            else
+            {
+                Console.WriteLine("\nEntered Nnumber is Odd Number");
+                Console.ReadLine();
+            }
+           
 
         }
 
