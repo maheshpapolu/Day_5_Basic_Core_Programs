@@ -11,20 +11,20 @@ namespace Basic_Core_Programs
         static void Main(string[] args)
         {
             Console.WriteLine("\nWelcome to Basic Core Programs");
-            Console.WriteLine("\nCompute_Qtotient_and_Reminder");
-
-            Console.WriteLine("enter a dividend number : ");
-            int dividend =Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Enter a divisor number : ");
-            int divisor = Convert.ToInt32(Console.ReadLine());
-
-            int quotient = dividend / divisor;
-            int remainder = dividend % divisor;
-
-            Console.WriteLine("Dividend:{0} Divisor{1}",dividend,divisor);
-            Console.WriteLine("Quotient = " + quotient);
-            Console.WriteLine("Remainder = " + remainder);
+            Console.WriteLine("\nSwap Two Numbers");
+            int number1, number2, temp;
+            Console.WriteLine("\n Enter first number ; ");
+            number1 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("\n Enter Second number: ");
+            number2 = Convert.ToInt32(Console.ReadLine());
+            temp = number1;
+            number1 = number2;
+            number2 = temp;
+            Console.WriteLine("\n After Swaping : ");
+            Console.WriteLine("\nFirst Number: ");
+            Console.WriteLine("\nSecond Number: ");
             Console.ReadLine();
+
         }
 
     }
