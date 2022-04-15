@@ -11,29 +11,19 @@ namespace Basic_Core_Programs
         static void Main(string[] args)
         {
             Console.WriteLine("\nWelcome to Basic Core Programs");
-            Console.WriteLine("\nPower of Two");
-                int number;
-                int reminder;
-                Console.WriteLine("Enter a number to check");
-                number = Convert.ToInt32(Console.ReadLine());
-                if (number == 1)
-                    Console.WriteLine("It is power of 2.");
-                else
-                {
-                    while(number > 1)
-                    {
-                        reminder = number % 2;
-                        if (reminder != 0)
-                            break;
-                        number /= 2;
-                    }
-                    if (number == 1)
-                        Console.WriteLine("it is power of 2");
-                    else
-                        Console.WriteLine("it is not a power of 2");
-                    Console.ReadLine();
-                }
-           
+            Console.WriteLine("\nHarmonic_Number");
+                int i,n;
+                double s =0.0;
+            Console.WriteLine("Input the number of terms : ");
+            n = Convert.ToInt32(Console.ReadLine());
+            for(i = 1; i <= n; i++)
+            {
+                Console.WriteLine("1/{0} + ", i);
+                s+=1/(float)i;
+            }
+            Console.WriteLine("\n Sum of Series upto {0} terms : {1} \n" ,n,s);
+            Console.ReadLine();
+      
         }
     }
 }
