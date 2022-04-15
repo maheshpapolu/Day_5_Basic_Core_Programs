@@ -11,17 +11,29 @@ namespace Basic_Core_Programs
         static void Main(string[] args)
         {
             Console.WriteLine("\nWelcome to Basic Core Programs");
-            Console.WriteLine("\nFind Leap Year ");
-            Console.WriteLine("Input an Year : ");
-            int CheckYear;
-            CheckYear = Convert.ToInt32(Console.ReadLine());
-            // checking conditions for leap year
-            if ((CheckYear % 400) == 0)
-                Console.WriteLine("{0} is a leap year.\n", CheckYear);
-            else if ((CheckYear % 100) == 0)
-                Console.WriteLine("{0} is not a leap year.\n", CheckYear);
-            else
-                Console.WriteLine("{0} is not a leap year.\n", CheckYear);
+            Console.WriteLine("\nPower of Two");
+                int number;
+                int reminder;
+                Console.WriteLine("Enter a number to check");
+                number = Convert.ToInt32(Console.ReadLine());
+                if (number == 1)
+                    Console.WriteLine("It is power of 2.");
+                else
+                {
+                    while(number > 1)
+                    {
+                        reminder = number % 2;
+                        if (reminder != 0)
+                            break;
+                        number /= 2;
+                    }
+                    if (number == 1)
+                        Console.WriteLine("it is power of 2");
+                    else
+                        Console.WriteLine("it is not a power of 2");
+                    Console.ReadLine();
+                }
+           
         }
     }
 }
